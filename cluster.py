@@ -5,6 +5,8 @@ import OpenCV_Cluster.save_originals
 import OpenCV_Cluster.cut
 import OpenCV_Cluster.cluster
 
+import Yolov5_Cluster.filter
+
 #OPENCV_CLUSTER
 
 #Define the variables that arent gonna change
@@ -52,6 +54,8 @@ OpenCV_Cluster.cluster.cluster_images(COUNTER, I, CROP_FOLDER_SMALL, CROP_FOLDER
 #YOLOV5_CLUSTER
 
 #call the filter function -> filters the images where there is something happening
+
+Yolov5_Cluster.filter.load_images_from_read_folder(ORIGINAL_FOLDER, DIFF_FOLDER)
 
 #call the detect function -> detects the boxes where there could be an insect and also clusters them
 
